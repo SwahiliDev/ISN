@@ -1,5 +1,8 @@
 ﻿#Mastermind Minigame Project By Ines x Vivien
-  color=[red,blue,green,yellow]
+color=[]
+nbrcolor=input("Nombre de couleurs")
+
+
 colonnes=input("Nombre de colonnes")
 tentatives=input("Nombre de tentatives")
 
