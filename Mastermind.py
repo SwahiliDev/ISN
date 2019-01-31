@@ -1,6 +1,6 @@
 ﻿#Mastermind Minigame Project By Ines x Vivien
   color=[red,blue,green,yellow]
-longueur=input("Longueur de la ligne")
+colonnes=input("Nombre de colonnes")
 tentatives=input("Nombre de tentatives")
 
 def Combinaison(color) :
