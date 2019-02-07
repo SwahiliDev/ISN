@@ -1,5 +1,6 @@
 #Mastermind Project by Hypnotiquee and Swahili
-
+import random
+from random import randint
 #How many colors (Issues fixed : final code)
 x=0
 color=[]
