@@ -1,4 +1,6 @@
-#initiation
+#Mastermind Project by Hypnotiquee and Swahili
+
+#Choisir le nombre de couleurs
 x=0
 color=[]
 lor=input("Nombre de couleurs")
