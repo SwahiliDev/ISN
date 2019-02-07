@@ -12,7 +12,7 @@ while nbrcolor!=0 :
     x+=1
     color.append(x)
     nbrcolor=nbrcolor-1
-
+print(color)
 
 
 #Other(Incomplete)
@@ -28,7 +28,7 @@ boule_ini=int(colonnes)
 for i in range (0,boule_ini,1):
     y=randint(1, len(color))
     comb.append(y)
-
+print(comb)
 
 
 
