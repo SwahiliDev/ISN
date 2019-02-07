@@ -14,10 +14,12 @@ while nbrcolor!=0 :
 colonnes=input("Nombre de colonnes")
 tentatives=input("Nombre de tentatives")
 
-
-
-def Combinaison(color) :
-    comb=[]
+#Combinaison initiale
+comb=[]
+boule_ini=int(colonnes)
+for i in range(0,boule_ini,1):
+    y=randint(1,len(color))
+    comb.append(y)
 
 
 
