@@ -29,10 +29,21 @@ for i in range (0,boule_ini,1):
 print(comb)
 
 #Pions Bien Placés (Code Final)
-def BienPlacé (comb, play):
-    bienplacé = 0
+def BienPlacés (comb, play):
+    bienplacés = 0
     for i in range(len(comb)):
         if play[i]==comb[i]:
-            bienplacé+=1
-    return bienplacé
-print(BienPlacé(comb, play))
+            bienplacés+=1
+    return bienplacés
+print(BienPlacés(comb, play))
+
+#Pions Mal Placés (À Modifier)
+def MalPlacés (comb, play):
+    présents = 0
+    for i in range(len(comb)):
+        
+
+            présents+=1
+    malplacés=présents-bienplacés
+    return malplacés
+print(MalPlacés(comb, play))
