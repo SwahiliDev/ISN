@@ -18,9 +18,6 @@ print(color)
 #Other(Incomplete)
 colonnes=input("Nombre de colonnes")
 tentatives=input("Nombre de tentatives")
-tent=int(tentatives)
-result=[]
-
 
 
 #Initial Combination (Issues fixed : final code)
@@ -33,22 +30,10 @@ print(comb)
 
 
 
-
-
-
- 
-"""
-for i in range (0,(tentatives+1),1):
-
-# test
-
-for i in range (0,(tent+1),1):
-    gamo=input("entre couleur playeur")
-    play=[]
-    play.append(gamo)
-
+def BienPlacé (comb, play) :
+    bienplacé = 0
     for i in range(0,len(comb)+1,1):
-        if play[i]== comb[i]:
-            result.append(1)
-            return
-        elif play[i]!= comb[i]:
+        if play[i]==comb[i]:
+            bienplacé+=1
+            return bienplacé
+
