@@ -3,7 +3,7 @@ import random
 from random import randint
 
 
-#How many colors (Issues fixed : final code)
+#Nombre de couleurs (Code Final)
 x=0
 color=[]
 lor=input("Nombre de couleurs")
@@ -15,12 +15,12 @@ while nbrcolor!=0 :
 print(color)
 
 
-#Other(Incomplete)
+#Autres(Incomplet)
 colonnes=input("Nombre de colonnes")
 tentatives=input("Nombre de tentatives")
 
 
-#Initial Combination (Issues fixed : final code)
+#Bot Combinaison (Code Final)
 comb=[]
 boule_ini=int(colonnes)
 for i in range (0,boule_ini,1):
@@ -28,12 +28,11 @@ for i in range (0,boule_ini,1):
     comb.append(y)
 print(comb)
 
-
-
-def BienPlacé (comb, play) :
+#Pions Bien Placés (Code Final)
+def BienPlacé (comb, play):
     bienplacé = 0
-    for i in range(0,len(comb)+1,1):
+    for i in range(len(comb)):
         if play[i]==comb[i]:
             bienplacé+=1
-            return bienplacé
-
+    return bienplacé
+print(BienPlacé(comb, play))
