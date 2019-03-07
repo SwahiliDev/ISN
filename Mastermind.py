@@ -35,7 +35,7 @@ def BienPlacés (comb, play):
         if play[i]==comb[i]:
             bienplacés+=1
     return bienplacés
-print(BienPlacés(comb, play))
+print(BienPlacés(comb, play)) 
 
 #Pions Mal Placés (À Modifier)
 def MalPlacés (comb, play):
