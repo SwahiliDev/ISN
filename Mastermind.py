@@ -37,16 +37,19 @@ def BienPlacés (comb, play):
     return bienplacés
 print(BienPlacés(comb, play)) 
 
-#Pions Mal Placés (À Modifier)
-def MalPlacés (comb, play):
-    présents = 0
-    for i in range(len(color)):
-        for i in range(len(comb)):
-            if play[i]==comb[i]:
-                présent+=1
-            else:
-                présent+=0
+#Pions Mal Placés (ça marche moyen)
+def compte(couleur,liste):
 
+def Placés (comb, play):
+    présents = 0
+    for i in range(len(play)):
+        colnb=play[i]
+        for i in range(len(comb)):
+            if colnb==comb[i]:
+                présents+=1
+            else:
+                présents+=0
     malplacés=présents-bienplacés
     return malplacés
 print(MalPlacés(comb, play))
+print(color)
