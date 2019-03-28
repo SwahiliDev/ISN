@@ -2,6 +2,7 @@
 import random
 from random import randint
 
+
 #Nombre de couleurs (Code Final)
 x=0
 CouleurListe=[]
@@ -26,6 +27,7 @@ for i in range (0,NbrColonnes,1):
     y=randint(1,len(Couleur))
     OrdiCombinaison.append(y)
 print(OrdiCombinaison)
+
 
 #Pions Bien Placés (Code Final)
 def PionsBienPlacés (OrdiCombinaison,JoueurCombinaison):
