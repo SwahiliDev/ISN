@@ -24,7 +24,7 @@ Tentatives=input("Nombre de tentatives")
 OrdiCombinaison=[]
 NbrColonnes=int(Colonnes)
 for i in range (0,NbrColonnes,1):
-    y=randint(1,len(Couleur))
+    y=randint(1,len(CouleurListe))
     OrdiCombinaison.append(y)
 print(OrdiCombinaison)
 
@@ -39,8 +39,9 @@ def PionsBienPlacés (OrdiCombinaison,JoueurCombinaison):
 print(PionsBienPlacés(OrdiCombinaison,JoueurCombinaison))
 
 
-#Pions Mal Placés (Code opérationnel)
-#Problème de Pions en plusieurs exemplaires comptés trop de fois réglé : Aide du prof
+#Pions Mal Placés (Code opérationnel + Code à ajouter)
+#Problème de Pions en plusieurs exemplaires comptés trop de fois
+#Aide du prof
 def CouleursPrésentes (OrdiCombinaison,JoueurCombinaison):
     OrdiCombinaisonCopie=[couleur for couleur in OrdiCombinaison]
     Présentes=0
