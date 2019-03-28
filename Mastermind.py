@@ -39,10 +39,9 @@ def PionsBienPlacés (OrdiCombinaison,JoueurCombinaison):
 print(PionsBienPlacés(OrdiCombinaison,JoueurCombinaison))
 
 
-#Pions Mal Placés (Code opérationnel + Code à ajouter)
-#Problème de Pions en plusieurs exemplaires comptés trop de fois
-#Aide du prof
-def CouleursPrésentes (OrdiCombinaison,JoueurCombinaison):
+#Pions Mal Placés (Code opérationnel)
+#Problème de Pions en plusieurs exemplaires comptés trop de fois réglé : Aide du prof
+def PionsMalPlacés (OrdiCombinaison,JoueurCombinaison):
     OrdiCombinaisonCopie=[couleur for couleur in OrdiCombinaison]
     Présentes=0
     for i in range(len(JoueurCombinaison)):
@@ -51,8 +50,9 @@ def CouleursPrésentes (OrdiCombinaison,JoueurCombinaison):
             if Compare==OrdiCombinaisonCopie[i]:
                 Présentes+=1
                 OrdiCombinaisonCopie[i]=0
+                break
             else:
                 Présentes+=0
     MalPlacés=Présentes-PionsBienPlacés(OrdiCombinaison,JoueurCombinaison)
     return MalPlacés
-print(CouleursPrésentes(OrdiCombinaison,JoueurCombinaison))
+print(PionsMalPlacés(OrdiCombinaison,JoueurCombinaison))
