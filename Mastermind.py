@@ -2,54 +2,51 @@
 import random
 from random import randint
 
-
 #Nombre de couleurs (Code Final)
 x=0
-color=[]
-lor=input("Nombre de couleurs")
-nbrcolor=int(lor)
-while nbrcolor!=0 :
+CouleurListe=[]
+Couleur=input("Nombre de couleurs")
+NbrCouleur=int(Couleur)
+while NbrCouleur!=0 :
     x+=1
-    color.append(x)
-    nbrcolor=nbrcolor-1
-print(color)
+    CouleurListe.append(x)
+    NbrCouleur=NbrCouleur-1
+print(CouleurListe)
 
 
 #Autres(Incomplet)
-colonnes=input("Nombre de colonnes")
-tentatives=input("Nombre de tentatives")
+Colonnes=input("Nombre de colonnes")
+Tentatives=input("Nombre de tentatives")
 
 
-#Bot Combinaison (Code Final)
-comb=[]
-boule_ini=int(colonnes)
-for i in range (0,boule_ini,1):
-    y=randint(1, len(color))
-    comb.append(y)
-print(comb)
+#Combinaison de l'Ordinateur (Code Final)
+OrdiCombinaison=[]
+NbrColonnes=int(Colonnes)
+for i in range (0,NbrColonnes,1):
+    y=randint(1,len(Couleur))
+    OrdiCombinaison.append(y)
+print(OrdiCombinaison)
 
 #Pions Bien Placés (Code Final)
-def BienPlacés (comb, play):
-    bienplacés = 0
-    for i in range(len(comb)):
-        if play[i]==comb[i]:
-            bienplacés+=1
-    return bienplacés
-print(BienPlacés(comb, play)) 
+def PionsBienPlacés (OrdiCombinaison,JoueurCombinaison):
+    BienPlacés=0
+    for i in range(len(OrdiCombinaison)):
+        if JoueurCombinaison[i]==OrdiCombinaison[i]:
+            BienPlacés+=1
+    return BienPlacés
+print(PionsBienPlacés(OrdiCombinaison,JoueurCombinaison))
+
 
 #Pions Mal Placés (ça marche moyen)
-def compte(couleur,liste):
-
-def Placés (comb, play):
-    présents = 0
-    for i in range(len(play)):
-        colnb=play[i]
-        for i in range(len(comb)):
-            if colnb==comb[i]:
-                présents+=1
+def CouleursPrésentes (OrdiCombinaison,JoueurCombinaison):
+    Présentes=0
+    for i in range(len(JoueurCombinaison)):
+        Compare=JoueurCombinaison[i]
+        for i in range(len(OrdiCombinaison)):
+            if Compare==OrdiCombinaison[i]:
+                Présentes+=1
             else:
-                présents+=0
-    malplacés=présents-bienplacés
-    return malplacés
-print(MalPlacés(comb, play))
-print(color)
+                Présentes+=0
+    MalPlacés=Présentes-PionsBienPlacés(OrdiCombinaison,JoueurCombinaison)
+    return MalPlacés
+print(CouleursPrésentes(OrdiCombinaison,JoueurCombinaison))
