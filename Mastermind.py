@@ -39,7 +39,8 @@ def PionsBienPlacés (OrdiCombinaison,JoueurCombinaison):
 print(PionsBienPlacés(OrdiCombinaison,JoueurCombinaison))
 
 
-#Pions Mal Placés (ça marche moyen)
+#Pions Mal Placés (Code opérationnel + Code à ajouter)
+#Problème de Pions en plusieurs exemplaires comptés trop de fois
 def CouleursPrésentes (OrdiCombinaison,JoueurCombinaison):
     Présentes=0
     for i in range(len(JoueurCombinaison)):
