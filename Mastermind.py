@@ -17,12 +17,13 @@ print(CouleurListe)
 
 #Autres(Incomplet)
 Colonnes=input("Nombre de colonnes")
+NbrColonnes=int(Colonnes)
 Tentatives=input("Nombre de tentatives")
+NbrTentatives=int(Tentatives)
 
 
 #Combinaison de l'Ordinateur (Code Final)
 OrdiCombinaison=[]
-NbrColonnes=int(Colonnes)
 for i in range (0,NbrColonnes,1):
     y=randint(1,len(CouleurListe))
     OrdiCombinaison.append(y)
@@ -38,7 +39,7 @@ def CombinaisonJoueur(JoueurCombinaison):
 print(CombinaisonJoueur(JoueurCombinaison))
 
 #Boucle principale (Pas Fait)
-if xxxxxxxxxx
+if CombinaisonJoueur!=OrdiCombinaison:
     #Pions Bien Placés (Code Final)
     def PionsBienPlacés (OrdiCombinaison,JoueurCombinaison):
         BienPlacés=0
