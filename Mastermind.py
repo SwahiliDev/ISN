@@ -24,13 +24,16 @@ ordi_combinaison=[]
 for i in range (0,nombre_colonnes,1):
     y=randint(1,len(couleur_liste))
     ordi_combinaison.append(y)
+print ("Solution secrete", ordi_combinaison)
 
 #Combinaison du Joueur
-def CombinaisonJoueur(joueur_combinaison):
-    for i in range(nombre_colonnes):
-        selection_couleurs=input("Choisissez une couleur")
-        joueur_combinaison.append(int(selection_couleurs))
-    return joueur_combinaison
+def CombinaisonJoueur():
+    combinaison_joueur = []
+    selection_couleurs=input("Choisissez une couleur (ex 1224)")
+    if (len(selection_couleurs) == nombre_colonnes) :
+        for i in range(nombre_colonnes):
+            combinaison_joueur.append(int(selection_couleurs[i]))
+    return combinaison_joueur #liste vide à tester si erreur d'entrée
 
 #Formules des pions bien placés
 def PionsBienPlacés(ordi_combinaison,joueur_combinaison):
@@ -57,21 +60,23 @@ def PionsMalPlacés(ordi_combinaison,joueur_combinaison):
     return malplacés
 
 #Boucle principale
-while nombre_tentatives!=0:
+while nombre_tentatives!=0 and gameover != 0:
     #Affichage de l'historique des combinaisons
-    joueur_combinaison=[]
-    print(CombinaisonJoueur(joueur_combinaison))
-    nombre_tentatives-=1
-    compteur+=1
-    #Boucle de comparaison
-    if joueur_combinaison!=ordi_combinaison:
-        print(PionsBienPlacés(ordi_combinaison,joueur_combinaison))
-        print(PionsMalPlacés(ordi_combinaison,joueur_combinaison))
-    #Message de victoire
+    joueur_combinaison=CombinaisonJoueur()
+    if len(joueur_combinaison) == 0 :
+        print("Attention à introduire le bon nombre de couleurs !")
     else :
-        print("Vous avez gagné en ",compteur,"tentative(s)")
-        gameover=0
-        break
+        print("Votre proposition n° ", compteur+1, " est : ", joueur_combinaison)
+        nombre_tentatives-=1
+        compteur+=1
+        #Boucle de comparaison
+        if joueur_combinaison!=ordi_combinaison:
+            print(PionsBienPlacés(ordi_combinaison,joueur_combinaison))
+            print(PionsMalPlacés(ordi_combinaison,joueur_combinaison))
+        #Message de victoire
+        else :
+            print("Vous avez gagné en ",compteur,"tentative(s)")
+            gameover=0
 #Message de défaite
 if gameover==1:
     print("Perdu, vous avez utilisé vos",compteur,"tentative(s)")
