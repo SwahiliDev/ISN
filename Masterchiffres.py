@@ -6,10 +6,15 @@ x=0
 chiffres_liste=[]
 chiffres=input("Combien de chiffres différents (entre 1 et 9)")
 nombre_chiffres=int(chiffres)
-while nombre_chiffres!=0 :
-    x+=1
-    chiffres_liste.append(x)
-    nombre_chiffres=nombre_chiffres-1
+while nombre_chiffres>=0:
+    if nombre_chiffres<=9:
+        x+=1
+        chiffres_liste.append(x)
+        nombre_chiffres=nombre_chiffres-1
+    else:
+        print("Votre nombre de chiffres doit être compris entre 1 et 9")
+        chiffres=input("Combien de chiffres différents (entre 1 et 9)")
+        nombre_chiffres=int(chiffres)
 
 #Autres
 colonnes=input("Nombre de colonnes")
@@ -28,9 +33,9 @@ print ("Combinaison à trouver", ordi_combinaison)
 
 #Combinaison du Joueur
 def CombinaisonJoueur():
-    combinaison_joueur = []
+    combinaison_joueur=[]
     selection_chiffres=input("Choisissez une combinaison (Exemple : 1234)")
-    if (len(selection_chiffres) == nombre_colonnes) :
+    if (len(selection_chiffres)==nombre_colonnes) :
         for i in range(nombre_colonnes):
             combinaison_joueur.append(int(selection_chiffres[i]))
     return combinaison_joueur #liste vide à tester si erreur d'entrée
@@ -80,4 +85,3 @@ while nombre_tentatives!=0 and gameover != 0:
 #Message de défaite
 if gameover==1:
     print("Perdu, vous avez utilisé vos",compteur,"tentative(s)")
-
