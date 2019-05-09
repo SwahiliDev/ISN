@@ -13,7 +13,7 @@ while nombre_chiffres>=0:
         nombre_chiffres=nombre_chiffres-1
     else:
         print("Votre nombre de chiffres doit être compris entre 1 et 9")
-        chiffres=input("Combien de chiffres différents (entre 1 et 9)")
+        chiffres=input("Combien de chiffres DIFFÉRENTS (entre 1 et 9)")
         nombre_chiffres=int(chiffres)
 
 #Autres
