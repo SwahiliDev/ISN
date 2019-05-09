@@ -65,7 +65,9 @@ def ChiffresMalPlacés(ordi_combinaison,joueur_combinaison):
     return malplacés
 
 #Boucle principale
+
 print("Bonne chance")
+
 while nombre_tentatives!=0 and gameover != 0:
     #Affichage de l'historique des combinaisons
     joueur_combinaison=CombinaisonJoueur()
