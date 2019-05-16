@@ -4,7 +4,7 @@ from random import randint
 #Nombre de chiffres
 x=0
 chiffres_liste=[]
-chiffres=input("Combien de chiffres différents (entre 1 et 9)(0 chiffres différents donnera que des 1)")
+chiffres=input("Combien de chiffres différents (entre 1 et 9) (0 chiffres différents ne donneront que des 1)")
 nombre_chiffres=int(chiffres)
 while nombre_chiffres>=0:
     if nombre_chiffres<=9:
@@ -21,6 +21,7 @@ colonnes=input("Nombre de colonnes")
 nombre_colonnes=int(colonnes)
 tentatives=input("Nombre de chances")
 nombre_tentatives=int(tentatives)
+print("Chiffre(s) disponible(s)",chiffres_liste)
 compteur=0
 gameover=1
 
@@ -79,8 +80,8 @@ while nombre_tentatives!=0 and gameover != 0:
         compteur+=1
         #Boucle de comparaison
         if joueur_combinaison!=ordi_combinaison:
-            print("Vous avez:",ChiffresBienPlacés(ordi_combinaison,joueur_combinaison),"chiffres de bien placés")
-            print("Vous avez:",ChiffresMalPlacés(ordi_combinaison,joueur_combinaison),"chiffres de mal placés")
+            print("Vous avez:",ChiffresBienPlacés(ordi_combinaison,joueur_combinaison),"chiffre(s) de bien placé(s)")
+            print("Vous avez:",ChiffresMalPlacés(ordi_combinaison,joueur_combinaison),"chiffre(s) de mal placé(s)")
         #Message de victoire
         else :
             print("Vous avez gagné en ",compteur,"tentative(s)")
