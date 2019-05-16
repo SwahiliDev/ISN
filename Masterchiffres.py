@@ -4,7 +4,7 @@ from random import randint
 #Nombre de chiffres
 x=0
 chiffres_liste=[]
-chiffres=input("Combien de chiffres différents (entre 1 et 9)")
+chiffres=input("Combien de chiffres différents (entre 1 et 9)(0 chiffres différents donnera que des 1)")
 nombre_chiffres=int(chiffres)
 while nombre_chiffres>=0:
     if nombre_chiffres<=9:
